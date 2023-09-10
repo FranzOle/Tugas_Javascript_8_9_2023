@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="ganti">Halo Bandung</h1>
+    <button onclick="Halo()">Klik sini</button>
+    <br>
+    <br>
+    <div>
+        <input type="text" id="nama" placeholder="Isi Namamu">
+        <button onclick="UbahNama()">Klik namamu</button> 
+        <h1 id="nama2">Nama Saya </h1>
+    </div>
+    <div>
+        <h1 id="hasil">Hasil</h1>
+        <input type="number" id="bil1">
+        <input type="number" id="bil2">
+        <button onclick="FungsiPerkalian()">Kali</button>
+        <button onclick ="FungsiPenjumlahan()">Tambah</button>
+        <button onclick ="FungsiPembagian()"> Bagi</button>
+        <button onclick ="FungsiPengurangan()">Kurang</button>
+    </div>    
+    <script>
+        function Halo(){
+            document.getElementById('ganti').innerHTML ="Hallo Javascript";
+        }
+        function UbahNama(){
+            let nama = document.getElementById('nama').value;
+            let hasilNama = `Halo Nama Saya adalah ${nama}`;
+            document.getElementById('nama2').innerHTML=hasilNama;
+        }
+
+    function FungsiPerkalian() {
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let kali = a * b;
+        document.getElementById('hasil').innerHTML = "Hasil: " + kali;
+    }
+
+    function FungsiPenjumlahan(){
+        let angka_a = parseInt( document.getElementById('bil1').value);
+        let angka_b = parseInt(document.getElementById('bil2').value);
+        let tambah = angka_a+angka_b;
+        document.getElementById('hasil').innerHTML = "Hasil :" + tambah;
+    }
+
+    function FungsiPembagian(){
+        let angka_a = parseInt(document.getElementById('bil1').value);
+        let angka_b = parseInt(document.getElementById('bil2').value);
+        let bagi = angka_a / angka_b;
+        document.getElementById('hasil').innerHTML = "Hasil :" + bagi;
+    }
+    function FungsiPengurangan(){
+        let angka_a = parseInt(document.getElementById('bil1').value);
+        let angka_b = parseInt(document.getElementById('bil2').value);
+        let kurang = angka_a - angka_b;
+        document.getElementById('hasil').innerHTML = "Hasil : "+ kurang;
+    }
+    </script>
+</body>
+</html>
